@@ -136,11 +136,11 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex min-h-screen bg-background">
+    <div className="flex min-h-screen overflow-hidden bg-background">
       {/* Left: Branding */}
-      <div className="hidden flex-1 flex-col items-center justify-center gap-10 bg-[oklch(0.14_0.02_255)] p-12 lg:flex">
+      <div className="hidden flex-1 flex-col items-center justify-center gap-10 bg-gradient-to-br from-primary/[0.04] to-primary/[0.08] p-12 lg:flex">
         {/* Decorative subtle grid */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
         <div className="relative flex flex-col items-center gap-5">
           <svg viewBox="0 0 120 120" className="size-28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="120" height="120" rx="32" fill="oklch(0.17 0.025 255)"/>
