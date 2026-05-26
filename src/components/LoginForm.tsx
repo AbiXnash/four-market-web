@@ -138,37 +138,38 @@ export default function LoginForm() {
   return (
     <div className="flex min-h-screen bg-background">
       {/* Left: Branding */}
-      <div className="hidden flex-1 flex-col items-center justify-center gap-8 bg-gradient-to-br from-primary/[0.04] to-primary/[0.08] p-12 lg:flex">
-        {/* Decorative grid */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
+      <div className="hidden flex-1 flex-col items-center justify-center gap-10 bg-[oklch(0.14_0.02_255)] p-12 lg:flex">
+        {/* Decorative subtle grid */}
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
         <div className="relative flex flex-col items-center gap-5">
-          <svg viewBox="0 0 512 512" className="size-28 drop-shadow-xl" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="logo-bg-d" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="oklch(0.55 0.15 265)"/>
-                <stop offset="100%" stopColor="oklch(0.45 0.15 265)"/>
-              </linearGradient>
-            </defs>
-            <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#logo-bg-d)"/>
-            <circle cx="256" cy="256" r="144" fill="white" fillOpacity="0.08"/>
-            <circle cx="256" cy="256" r="72" fill="white" fillOpacity="0.1"/>
+          <svg viewBox="0 0 120 120" className="size-28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="120" height="120" rx="32" fill="oklch(0.17 0.025 255)"/>
+            <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.25"/>
+            <path d="M22 88 C30 60, 55 35, 98 28" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.08" strokeWidth="18" strokeLinecap="round" fill="none"/>
+            <path d="M18 96 C28 65, 58 38, 102 30" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.2" strokeWidth="8" strokeLinecap="round" fill="none"/>
+            <line x1="52" y1="36" x2="52" y2="84" stroke="white" strokeWidth="5.5" strokeLinecap="round"/>
+            <path d="M52 36 Q44 60 30 72" stroke="white" strokeWidth="5.5" strokeLinecap="round" fill="none"/>
+            <line x1="28" y1="72" x2="57" y2="72" stroke="white" strokeWidth="5.5" strokeLinecap="round"/>
+            <line x1="62" y1="44" x2="62" y2="84" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round"/>
+            <path d="M62 44 Q71 66 80 44" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+            <line x1="80" y1="44" x2="80" y2="84" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round"/>
+            <path d="M28 90 Q60 98 92 90" stroke="oklch(0.6 0.15 265)" strokeWidth="1.5" strokeLinecap="round" fill="none" strokeOpacity="0.5"/>
           </svg>
           <div className="text-center">
-            <div className="flex items-baseline justify-center gap-0">
-              <span className="text-8xl font-black tracking-tighter text-primary">
+            <div className="flex items-baseline justify-center gap-1">
+              <span className="text-5xl font-bold tracking-tight text-primary" style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 900 }}>
                 4
               </span>
-              <span className="text-3xl font-semibold tracking-tight text-foreground/80">
-                Market
+              <span className="text-3xl font-light tracking-tight text-foreground/80">
+                market
               </span>
             </div>
-            <div className="mt-5 flex items-center justify-center gap-1.5">
-              <span className="size-1.5 rounded-full bg-primary/40" />
-              <span className="size-1.5 rounded-full bg-primary/60" />
-              <span className="size-1.5 rounded-full bg-primary" />
-              <span className="size-1.5 rounded-full bg-primary/60" />
-              <span className="size-1.5 rounded-full bg-primary/40" />
-            </div>
+            <svg width="200" height="12" viewBox="0 0 200 12" className="mx-auto mt-1" fill="none">
+              <path d="M10 8 Q100 1 190 8" stroke="oklch(0.6 0.15 265)" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5"/>
+            </svg>
+            <span className="mt-3 block text-[10px] font-medium uppercase tracking-[4px] text-muted-foreground/60">
+              Your marketplace platform
+            </span>
           </div>
         </div>
       </div>
@@ -182,33 +183,31 @@ export default function LoginForm() {
           <CardHeader className="relative pb-6 pt-8 after:pointer-events-none after:absolute after:inset-x-6 after:bottom-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-border after:to-transparent">
             {/* Mobile logo */}
             <div className="mb-4 flex flex-col items-center gap-2 lg:hidden">
-              <svg viewBox="0 0 512 512" className="size-14 drop-shadow" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <linearGradient id="logo-bg-m" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="oklch(0.55 0.15 265)"/>
-                    <stop offset="100%" stopColor="oklch(0.45 0.15 265)"/>
-                  </linearGradient>
-                </defs>
-                <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#logo-bg-m)"/>
-                <circle cx="256" cy="256" r="144" fill="white" fillOpacity="0.08"/>
-                <circle cx="256" cy="256" r="72" fill="white" fillOpacity="0.1"/>
+              <svg viewBox="0 0 120 120" className="size-14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="120" height="120" rx="32" fill="oklch(0.17 0.025 255)"/>
+                <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.25"/>
+                <path d="M22 88 C30 60, 55 35, 98 28" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.08" strokeWidth="18" strokeLinecap="round" fill="none"/>
+                <path d="M18 96 C28 65, 58 38, 102 30" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.2" strokeWidth="8" strokeLinecap="round" fill="none"/>
+                <line x1="52" y1="36" x2="52" y2="84" stroke="white" strokeWidth="5.5" strokeLinecap="round"/>
+                <path d="M52 36 Q44 60 30 72" stroke="white" strokeWidth="5.5" strokeLinecap="round" fill="none"/>
+                <line x1="28" y1="72" x2="57" y2="72" stroke="white" strokeWidth="5.5" strokeLinecap="round"/>
+                <line x1="62" y1="44" x2="62" y2="84" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round"/>
+                <path d="M62 44 Q71 66 80 44" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+                <line x1="80" y1="44" x2="80" y2="84" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round"/>
+                <path d="M28 90 Q60 98 92 90" stroke="oklch(0.6 0.15 265)" strokeWidth="1.5" strokeLinecap="round" fill="none" strokeOpacity="0.5"/>
               </svg>
               <div className="text-center">
-                <div className="flex items-baseline justify-center gap-0">
-                  <span className="text-4xl font-black tracking-tighter text-primary">
+                <div className="flex items-baseline justify-center gap-0.5">
+                  <span className="text-2xl font-bold tracking-tight text-primary" style={{ fontFamily: "var(--font-playfair), Georgia, serif", fontWeight: 900 }}>
                     4
                   </span>
-                  <span className="text-lg font-semibold tracking-tight text-foreground/80">
-                    Market
+                  <span className="text-lg font-light tracking-tight text-foreground/80">
+                    market
                   </span>
                 </div>
-                <div className="mt-2 flex items-center justify-center gap-1">
-                  <span className="size-1 rounded-full bg-primary/40" />
-                  <span className="size-1 rounded-full bg-primary/60" />
-                  <span className="size-1 rounded-full bg-primary" />
-                  <span className="size-1 rounded-full bg-primary/60" />
-                  <span className="size-1 rounded-full bg-primary/40" />
-                </div>
+                <svg width="140" height="10" viewBox="0 0 140 10" className="mx-auto mt-0.5" fill="none">
+                  <path d="M7 6 Q70 1 133 6" stroke="oklch(0.6 0.15 265)" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.5"/>
+                </svg>
               </div>
             </div>
             <CardTitle className="text-center text-xl">Welcome back</CardTitle>

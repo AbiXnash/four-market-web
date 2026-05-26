@@ -2,7 +2,7 @@
 
 import { Toaster } from "@/components/ui/sonner";
 import { useCallback, useEffect, useState } from "react";
-import { outfit } from "@/lib/fonts";
+import { outfit, playfair } from "@/lib/fonts";
 import "./globals.css";
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
 
   if (blocked) {
     return (
-      <html lang="en" className={outfit.variable}>
+      <html lang="en" className={`${outfit.variable} ${playfair.variable}`}>
         <body className="bg-slate-950">
           <div className="flex min-h-screen items-center justify-center p-4">
             <div className="w-full max-w-md rounded-lg border border-slate-800 bg-slate-900 p-8 text-center shadow-xl">

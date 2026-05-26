@@ -1,11 +1,13 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="oklch(0.55 0.15 265)"/>
-      <stop offset="100%" stop-color="oklch(0.45 0.15 265)"/>
-    </linearGradient>
-  </defs>
-  <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#bg)"/>
-  <circle cx="256" cy="256" r="144" fill="white" fill-opacity="0.08"/>
-  <circle cx="256" cy="256" r="72" fill="white" fill-opacity="0.1"/>
+<svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="120" height="120" rx="32" fill="#0F2040"/>
+  <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="#3B82F6" stroke-opacity="0.25"/>
+  <path d="M22 88 C30 60, 55 35, 98 28" stroke="#3B82F6" stroke-opacity="0.08" stroke-width="18" stroke-linecap="round" fill="none"/>
+  <path d="M18 96 C28 65, 58 38, 102 30" stroke="#3B82F6" stroke-opacity="0.2" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <line x1="52" y1="36" x2="52" y2="84" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  <path d="M52 36 Q44 60 30 72" stroke="white" stroke-width="5.5" stroke-linecap="round" fill="none"/>
+  <line x1="28" y1="72" x2="57" y2="72" stroke="white" stroke-width="5.5" stroke-linecap="round"/>
+  <line x1="62" y1="44" x2="62" y2="84" stroke="#3B82F6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M62 44 Q71 66 80 44" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <line x1="80" y1="44" x2="80" y2="84" stroke="#3B82F6" stroke-width="5" stroke-linecap="round"/>
+  <path d="M28 90 Q60 98 92 90" stroke="#3B82F6" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-opacity="0.5"/>
 </svg>

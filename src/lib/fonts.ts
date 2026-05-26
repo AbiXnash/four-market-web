@@ -1,6 +1,11 @@
-import { Outfit } from "next/font/google";
+import { Outfit, Playfair_Display } from "next/font/google";
 
 export const outfit = Outfit({
   subsets: ["latin"],
   variable: "--font-outfit",
+});
+
+export const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
 });
