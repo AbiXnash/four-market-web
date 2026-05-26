@@ -138,9 +138,9 @@ export default function LoginForm() {
   return (
     <div className="flex min-h-screen overflow-hidden bg-background">
       {/* Left: Branding */}
-      <div className="hidden flex-1 flex-col items-center justify-center gap-10 bg-gradient-to-br from-primary/[0.04] to-primary/[0.08] p-12 lg:flex">
+      <div className="hidden flex-1 flex-col items-center justify-center gap-10 bg-linear-to-br from-primary/4 to-primary/8 p-12 lg:flex">
         {/* Decorative subtle grid */}
-        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary)/0.03)_1px,transparent_1px)] bg-size-[64px_64px] mask-[radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
         {/* Large organic flowing curves */}
         <svg className="pointer-events-none absolute inset-0 size-full" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M0 400 C200 100, 400 600, 800 200" stroke="var(--primary)" strokeOpacity="0.04" strokeWidth="60" strokeLinecap="round" fill="none"/>
@@ -176,9 +176,9 @@ export default function LoginForm() {
           </div>
           {/* Divider with dot */}
           <div className="flex items-center gap-3">
-            <span className="h-px w-16 bg-gradient-to-r from-transparent to-primary/30" />
+            <span className="h-px w-16 bg-linear-to-r from-transparent to-primary/30" />
             <span className="size-1.5 rounded-full bg-primary" />
-            <span className="h-px w-16 bg-gradient-to-l from-transparent to-primary/30" />
+            <span className="h-px w-16 bg-linear-to-l from-transparent to-primary/30" />
           </div>
           <div className="text-center">
             <p className="text-xs font-medium uppercase tracking-[4px] text-muted-foreground/60">
@@ -196,12 +196,12 @@ export default function LoginForm() {
       </div>
 
       {/* Right: Form */}
-      <div className="relative flex flex-1 items-center justify-center bg-gradient-to-br from-background via-background to-primary/[0.03] p-6">
+      <div className="relative flex flex-1 items-center justify-center bg-linear-to-br from-background via-background to-primary/3 p-6">
         {/* Decorative corner accent */}
         <div className="pointer-events-none absolute -right-20 -top-20 size-80 rounded-full bg-primary/[0.03] blur-3xl" />
         <div className="pointer-events-none absolute -bottom-20 -left-20 size-80 rounded-full bg-primary/[0.02] blur-3xl" />
         <Card className="relative w-full max-w-sm border-primary/5 shadow-2xl shadow-primary/10">
-          <CardHeader className="relative pb-6 pt-8 after:pointer-events-none after:absolute after:inset-x-6 after:bottom-0 after:h-px after:bg-gradient-to-r after:from-transparent after:via-border after:to-transparent">
+          <CardHeader className="relative pb-6 pt-8 after:pointer-events-none after:absolute after:inset-x-6 after:bottom-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-border after:to-transparent">
             {/* Mobile logo */}
             <div className="mb-4 flex flex-col items-center gap-2 lg:hidden">
               <svg viewBox="0 0 120 120" className="size-14" fill="none" xmlns="http://www.w3.org/2000/svg">
