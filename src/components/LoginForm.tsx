@@ -198,8 +198,8 @@ export default function LoginForm() {
       {/* Right: Form */}
       <div className="relative flex flex-1 items-center justify-center bg-linear-to-br from-background via-background to-primary/3 p-6">
         {/* Decorative corner accent */}
-        <div className="pointer-events-none absolute -right-20 -top-20 size-80 rounded-full bg-primary/[0.03] blur-3xl" />
-        <div className="pointer-events-none absolute -bottom-20 -left-20 size-80 rounded-full bg-primary/[0.02] blur-3xl" />
+        <div className="pointer-events-none absolute -right-20 -top-20 size-80 rounded-full bg-primary/3 blur-3xl" />
+        <div className="pointer-events-none absolute -bottom-20 -left-20 size-80 rounded-full bg-primary/2 blur-3xl" />
         <Card className="relative w-full max-w-sm border-primary/5 shadow-2xl shadow-primary/10">
           <CardHeader className="relative pb-6 pt-8 after:pointer-events-none after:absolute after:inset-x-6 after:bottom-0 after:h-px after:bg-linear-to-r after:from-transparent after:via-border after:to-transparent">
             {/* Mobile logo */}
