@@ -361,6 +361,22 @@ export default function LoginForm() {
               Forgot password?
             </a>
           </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 flex items-center">
+              <span className="w-full border-t border-border/60" />
+            </div>
+            <div className="relative flex justify-center text-xs uppercase">
+              <span className="bg-card px-3 text-muted-foreground/50">or</span>
+            </div>
+          </div>
+
+          <p className="text-center text-sm text-muted-foreground">
+            Don&apos;t have an account?{" "}
+            <a href="/register" className="font-medium text-primary transition-colors hover:text-primary/80">
+              Create one
+            </a>
+          </p>
         </CardContent>
           </Card>
           {/* Bottom footer */}
