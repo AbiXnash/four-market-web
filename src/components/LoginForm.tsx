@@ -363,6 +363,12 @@ export default function LoginForm() {
           </div>
         </CardContent>
           </Card>
+          {/* Bottom footer */}
+          <div className="absolute bottom-6 right-8 flex items-center gap-3 text-xs text-muted-foreground/50">
+            <span>Made by <span className="font-medium text-muted-foreground/70">ABX</span></span>
+            <span className="text-muted-foreground/30">|</span>
+            <a href="/contact" className="transition-colors hover:text-primary">Contact us</a>
+          </div>
         </div>
       </div>
     );
