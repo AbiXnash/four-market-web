@@ -143,17 +143,17 @@ export default function LoginForm() {
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
         <div className="relative flex flex-col items-center gap-5">
           <svg viewBox="0 0 120 120" className="size-28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="120" height="120" rx="32" fill="oklch(0.17 0.025 255)"/>
-            <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.25"/>
-            <path d="M22 88 C30 60, 55 35, 98 28" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.08" strokeWidth="18" strokeLinecap="round" fill="none"/>
-            <path d="M18 96 C28 65, 58 38, 102 30" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.2" strokeWidth="8" strokeLinecap="round" fill="none"/>
+            <rect width="120" height="120" rx="32" fill="oklch(0.17 0.03 260)"/>
+            <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="var(--primary)" strokeOpacity="0.25"/>
+            <path d="M22 88 C30 60, 55 35, 98 28" stroke="var(--primary)" strokeOpacity="0.08" strokeWidth="18" strokeLinecap="round" fill="none"/>
+            <path d="M18 96 C28 65, 58 38, 102 30" stroke="var(--primary)" strokeOpacity="0.2" strokeWidth="8" strokeLinecap="round" fill="none"/>
             <line x1="52" y1="36" x2="52" y2="84" stroke="white" strokeWidth="5.5" strokeLinecap="round"/>
             <path d="M52 36 Q44 60 30 72" stroke="white" strokeWidth="5.5" strokeLinecap="round" fill="none"/>
             <line x1="28" y1="72" x2="57" y2="72" stroke="white" strokeWidth="5.5" strokeLinecap="round"/>
-            <line x1="62" y1="44" x2="62" y2="84" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round"/>
-            <path d="M62 44 Q71 66 80 44" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round" fill="none"/>
-            <line x1="80" y1="44" x2="80" y2="84" stroke="oklch(0.6 0.15 265)" strokeWidth="5" strokeLinecap="round"/>
-            <path d="M28 90 Q60 98 92 90" stroke="oklch(0.6 0.15 265)" strokeWidth="1.5" strokeLinecap="round" fill="none" strokeOpacity="0.5"/>
+            <line x1="62" y1="44" x2="62" y2="84" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round"/>
+            <path d="M62 44 Q71 66 80 44" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round" fill="none"/>
+            <line x1="80" y1="44" x2="80" y2="84" stroke="var(--primary)" strokeWidth="5" strokeLinecap="round"/>
+            <path d="M28 90 Q60 98 92 90" stroke="var(--primary)" strokeWidth="1.5" strokeLinecap="round" fill="none" strokeOpacity="0.5"/>
           </svg>
           <div className="text-center">
             <div className="flex items-baseline justify-center gap-1">
@@ -165,7 +165,7 @@ export default function LoginForm() {
               </span>
             </div>
             <svg width="200" height="12" viewBox="0 0 200 12" className="mx-auto mt-1" fill="none">
-              <path d="M10 8 Q100 1 190 8" stroke="oklch(0.6 0.15 265)" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5"/>
+              <path d="M10 8 Q100 1 190 8" stroke="var(--primary)" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5"/>
             </svg>
             <span className="mt-3 block text-[10px] font-medium uppercase tracking-[4px] text-muted-foreground/60">
               Your marketplace platform
@@ -184,7 +184,7 @@ export default function LoginForm() {
             {/* Mobile logo */}
             <div className="mb-4 flex flex-col items-center gap-2 lg:hidden">
               <svg viewBox="0 0 120 120" className="size-14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect width="120" height="120" rx="32" fill="oklch(0.17 0.025 255)"/>
+                <rect width="120" height="120" rx="32" fill="oklch(0.17 0.03 260)"/>
                 <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.25"/>
                 <path d="M22 88 C30 60, 55 35, 98 28" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.08" strokeWidth="18" strokeLinecap="round" fill="none"/>
                 <path d="M18 96 C28 65, 58 38, 102 30" stroke="oklch(0.6 0.15 265)" strokeOpacity="0.2" strokeWidth="8" strokeLinecap="round" fill="none"/>
@@ -206,7 +206,7 @@ export default function LoginForm() {
                   </span>
                 </div>
                 <svg width="140" height="10" viewBox="0 0 140 10" className="mx-auto mt-0.5" fill="none">
-                  <path d="M7 6 Q70 1 133 6" stroke="oklch(0.6 0.15 265)" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.5"/>
+                  <path d="M7 6 Q70 1 133 6" stroke="var(--primary)" strokeWidth="1" strokeLinecap="round" fill="none" opacity="0.5"/>
                 </svg>
               </div>
             </div>
