@@ -20,9 +20,7 @@ export default function RootLayout({
     const channel = new BroadcastChannel("tab-guard");
     const tabId = crypto.randomUUID();
 
-    const timeout = setTimeout(() => {
-      channel.postMessage({ type: "hello", tabId });
-    }, 500);
+    channel.postMessage({ type: "hello", tabId });
 
     channel.onmessage = (e) => {
       if (e.data.type === "hello" && e.data.tabId !== tabId) {
@@ -35,7 +33,6 @@ export default function RootLayout({
     window.addEventListener("beforeunload", () => channel.close());
 
     return () => {
-      clearTimeout(timeout);
       channel.close();
     };
   }, []);
