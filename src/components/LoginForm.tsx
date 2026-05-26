@@ -141,7 +141,13 @@ export default function LoginForm() {
       <div className="hidden flex-1 flex-col items-center justify-center gap-10 bg-gradient-to-br from-primary/[0.04] to-primary/[0.08] p-12 lg:flex">
         {/* Decorative subtle grid */}
         <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(rgba(var(--primary)/0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary)/0.03)_1px,transparent_1px)] bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,black,transparent)]" />
-        <div className="relative flex flex-col items-center gap-5">
+        {/* Large organic flowing curves */}
+        <svg className="pointer-events-none absolute inset-0 size-full" viewBox="0 0 800 800" preserveAspectRatio="xMidYMid slice" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 400 C200 100, 400 600, 800 200" stroke="var(--primary)" strokeOpacity="0.04" strokeWidth="60" strokeLinecap="round" fill="none"/>
+          <path d="M0 550 C250 300, 500 700, 800 350" stroke="var(--primary)" strokeOpacity="0.03" strokeWidth="80" strokeLinecap="round" fill="none"/>
+          <path d="M0 250 C300 500, 450 100, 800 500" stroke="var(--primary)" strokeOpacity="0.025" strokeWidth="100" strokeLinecap="round" fill="none"/>
+        </svg>
+        <div className="relative flex flex-col items-center gap-8">
           <svg viewBox="0 0 120 120" className="size-28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="120" height="120" rx="32" fill="oklch(0.17 0.03 260)"/>
             <rect x="0.5" y="0.5" width="119" height="119" rx="31.5" stroke="var(--primary)" strokeOpacity="0.25"/>
@@ -167,9 +173,24 @@ export default function LoginForm() {
             <svg width="200" height="12" viewBox="0 0 200 12" className="mx-auto mt-1" fill="none">
               <path d="M10 8 Q100 1 190 8" stroke="var(--primary)" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.5"/>
             </svg>
-            <span className="mt-3 block text-[10px] font-medium uppercase tracking-[4px] text-muted-foreground/60">
+          </div>
+          {/* Divider with dot */}
+          <div className="flex items-center gap-3">
+            <span className="h-px w-16 bg-gradient-to-r from-transparent to-primary/30" />
+            <span className="size-1.5 rounded-full bg-primary" />
+            <span className="h-px w-16 bg-gradient-to-l from-transparent to-primary/30" />
+          </div>
+          <div className="text-center">
+            <p className="text-xs font-medium uppercase tracking-[4px] text-muted-foreground/60">
               Your marketplace platform
-            </span>
+            </p>
+            <div className="mt-3 flex items-center justify-center gap-2">
+              <span className="size-1 rounded-full bg-primary/30" />
+              <span className="size-1 rounded-full bg-primary/50" />
+              <span className="size-1.5 rounded-full bg-primary" />
+              <span className="size-1 rounded-full bg-primary/50" />
+              <span className="size-1 rounded-full bg-primary/30" />
+            </div>
           </div>
         </div>
       </div>
