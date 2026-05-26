@@ -1,12 +1,44 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
   <style>
-    .bg { fill: #c8a96e; }
-    .text { fill: #ffffff; }
+    .bg    { fill: #C8A96E; }
+    .rim   { display: none; }
+    .four  { stroke: #ffffff; }
+    .em    { stroke: #ffffff; }
+    .arc   { stroke: #ffffff; stroke-opacity: 0.5; }
+    .glow  { stroke: #ffffff; stroke-opacity: 0.15; }
     @media (prefers-color-scheme: dark) {
-      .bg { fill: #0f2040; }
-      .text { fill: #c8a96e; }
+      .bg   { fill: #0F2040; }
+      .rim  { display: block; }
+      .four { stroke: #ffffff; }
+      .em   { stroke: #C8A96E; }
+      .arc  { stroke: #C8A96E; stroke-opacity: 0.5; }
+      .glow { stroke: #C8A96E; stroke-opacity: 0.1; }
     }
   </style>
-  <rect class="bg" x="2" y="2" width="44" height="44" rx="12" />
-  <text class="text" x="24" y="33" text-anchor="middle" font-family="Outfit, sans-serif" font-weight="700" font-size="24">4M</text>
+
+  <!-- background -->
+  <rect class="bg" width="48" height="48" rx="12"/>
+  <!-- gold rim (dark mode only) -->
+  <rect class="rim" x="0.5" y="0.5" width="47" height="47" rx="11.5"
+        fill="none" stroke="#C8A96E" stroke-opacity="0.35"/>
+
+  <!-- flowing arc -->
+  <path class="glow" d="M8 36 C12 24, 26 14, 40 11"
+        fill="none" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- 4 -->
+  <line class="four" x1="21" y1="12" x2="21" y2="36" stroke-width="3.2" stroke-linecap="round"/>
+  <path class="four" d="M21 12 Q16 21 10 26"
+        fill="none" stroke-width="3.2" stroke-linecap="round"/>
+  <line class="four" x1="9"  y1="26" x2="23" y2="26" stroke-width="3.2" stroke-linecap="round"/>
+
+  <!-- M -->
+  <line class="em" x1="27" y1="14" x2="27" y2="36" stroke-width="3" stroke-linecap="round"/>
+  <path class="em" d="M27 14 Q32 23 37 14"
+        fill="none" stroke-width="3" stroke-linecap="round"/>
+  <line class="em" x1="37" y1="14" x2="37" y2="36" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- curved underline -->
+  <path class="arc" d="M9 40 Q24 43 39 40"
+        fill="none" stroke-width="1" stroke-linecap="round"/>
 </svg>
