@@ -5,10 +5,8 @@ import { useCallback, useEffect, useState } from "react";
 
 export function RootLayoutClient({
   children,
-  playfairVariable,
 }: {
   children: React.ReactNode;
-  playfairVariable: string;
 }) {
   const [blocked, setBlocked] = useState(false);
 

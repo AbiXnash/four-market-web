@@ -1,4 +1,4 @@
-import { outfit, playfair } from "@/lib/fonts";
+import { outfit } from "@/lib/fonts";
 import "./globals.css";
 import { RootLayoutClient } from "./root-layout-client";
 import type { Metadata } from "next";
@@ -21,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={outfit.variable}>
       <body className="bg-background text-foreground">
-        <RootLayoutClient playfairVariable={playfair.variable}>
+        <RootLayoutClient>
           {children}
         </RootLayoutClient>
       </body>
