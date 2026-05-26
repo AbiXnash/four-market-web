@@ -150,7 +150,8 @@ export default function LoginForm() {
               </linearGradient>
             </defs>
             <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#logo-bg-d)"/>
-            <text x="256" y="290" textAnchor="middle" dominantBaseline="central" fontFamily="Outfit, sans-serif" fontWeight="800" fontSize="200" fill="white" letterSpacing="-0.03em">4</text>
+            <circle cx="256" cy="256" r="144" fill="white" fillOpacity="0.08"/>
+            <circle cx="256" cy="256" r="72" fill="white" fillOpacity="0.1"/>
           </svg>
           <div className="text-center">
             <div className="flex items-baseline justify-center gap-0">
@@ -189,7 +190,8 @@ export default function LoginForm() {
                   </linearGradient>
                 </defs>
                 <rect x="32" y="32" width="448" height="448" rx="96" fill="url(#logo-bg-m)"/>
-                <text x="256" y="290" textAnchor="middle" dominantBaseline="central" fontFamily="Outfit, sans-serif" fontWeight="800" fontSize="200" fill="white" letterSpacing="-0.03em">4</text>
+                <circle cx="256" cy="256" r="144" fill="white" fillOpacity="0.08"/>
+                <circle cx="256" cy="256" r="72" fill="white" fillOpacity="0.1"/>
               </svg>
               <div className="text-center">
                 <div className="flex items-baseline justify-center gap-0">
@@ -319,7 +321,7 @@ export default function LoginForm() {
             type="button"
             disabled={!canSubmit || submitting}
             onClick={handleSubmit}
-            className="w-full shadow-sm"
+            className="mt-6 w-full shadow-sm"
           >
             {submitting ? (
               <span className="inline-flex items-center gap-2">
@@ -331,7 +333,7 @@ export default function LoginForm() {
             )}
           </Button>
 
-          <div className="text-center">
+          <div className="text-right">
             <a
               href="/forgot-password"
               className="inline-flex items-center gap-1.5 text-sm text-muted-foreground underline-offset-4 transition-colors hover:text-foreground hover:underline"
