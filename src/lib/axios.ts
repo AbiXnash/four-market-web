@@ -13,6 +13,22 @@ export const api = axios.create({
 
 let csrfToken: string | null = null;
 let csrfFetching = false;
+let retryCount = 0;
+
+// Bare instance for CSRF handshake — no error toasts, just token capture
+const csrfApi = axios.create({
+  baseURL: api.defaults.baseURL,
+  withCredentials: true,
+  headers: {
+    "X-Client-Header": "ABX",
+  },
+});
+
+csrfApi.interceptors.response.use((response) => {
+  const token = response.headers["x-csrf-token"];
+  if (token) csrfToken = token;
+  return response;
+});
 
 api.interceptors.request.use(async (config) => {
   if (csrfFetching || typeof window === "undefined") return config;
@@ -21,9 +37,9 @@ api.interceptors.request.use(async (config) => {
   if ((method === "POST" || method === "PUT" || method === "DELETE") && !csrfToken) {
     csrfFetching = true;
     try {
-      await api.get("csrf");
+      await csrfApi.get("auth/csrf");
     } catch {
-      // Even error responses carry X-CSRF-TOKEN header
+      // CSRF endpoint may not exist yet — silently ignored
     } finally {
       csrfFetching = false;
     }
@@ -40,11 +56,21 @@ api.interceptors.response.use(
   (response) => {
     const token = response.headers["x-csrf-token"];
     if (token) csrfToken = token;
+    retryCount = 0;
     return response;
   },
   (error: AxiosError) => {
     const freshToken = error.response?.headers?.["x-csrf-token"];
     if (freshToken) csrfToken = freshToken;
+
+    const status = error.response?.status;
+    const config = error.config;
+
+    if (status === 403 && config && retryCount < 2) {
+      retryCount++;
+      csrfToken = null;
+      return api(config);
+    }
 
     if (!error.response) {
       if (error.code === "ECONNABORTED") {
