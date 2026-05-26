@@ -4,9 +4,10 @@ export interface LoginRequest {
 }
 
 export interface LoginResponse {
-  status: number
-  statusMessage: string
-  token: token
+  userId: string
+  username: string
+  lastLogin?: string
+  jwtToken: token
 }
 
 interface token {

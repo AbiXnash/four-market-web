@@ -1,60 +1,89 @@
-import { useState } from "react";
-import { login } from "../api/auth/auth";
-import type { LoginRequest } from "../types/login";
+"use client";
+
+import { AuthError } from "@/errors/AuthError";
+import { handleLogin } from "@/handler/auth/authHandler";
+import type { LoginRequest } from "@/types/login";
+import { loginValidator } from "@/utils/ReqeustValidator";
+import { useRef, useState } from "react";
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const submit = async (e: React.SubmitEvent) => {
+  const loginFormRef =
+    useRef<HTMLFormElement>(null);
+
+  const submit = async (
+    e: React.FormEvent<HTMLFormElement>
+  ) => {
     e.preventDefault();
 
-    const request: LoginRequest = {
-      email, password
-    };
+    const submitBtn = loginFormRef.current?.querySelector(
+      'input[type="submit"]'
+    ) as HTMLInputElement | null;
+
+    submitBtn!.disabled = true;
+
 
     try {
-      const response = await login(request);
-      console.log(response.data);
+      const request: LoginRequest = {
+        email,
+        password
+      };
 
+      const response = loginValidator(
+        await handleLogin(request)
+      );
+
+      console.log("Login success", response);
     } catch (err) {
-      console.log("Login failed", err);
+
+      setEmail("");
+      setPassword("");
+
+      if (err instanceof AuthError) {
+        console.log(err.message);
+        return;
+      }
+
+      console.error(err);
+    } finally {
+      loginFormRef.current?.reset();
+      submitBtn!.disabled = false;
     }
   };
 
   return (
-    <form onSubmit={submit}>
-      <label htmlFor="login-email"> Email </label>
-
+    <form
+      ref={loginFormRef}
+      onSubmit={submit}
+    >
+      <label htmlFor="login-email-input"> Email</label>
       <input
-        id="login-email"
+        id="login-email-input"
         type="email"
         value={email}
         onChange={(e) =>
           setEmail(e.target.value)
         }
-        placeholder="Enter email"
         required
       />
-
       <br />
 
-      <label htmlFor="login-password"> Password </label>
+      <label htmlFor="login-password-input"> Password</label>
       <input
-        id="login-password"
+        id="login-password-input"
         type="password"
         value={password}
         onChange={(e) =>
           setPassword(e.target.value)
         }
-        placeholder="Enter password"
         required
       />
-
+      <br />
       <br />
 
-      <button type="submit"> Login </button>
-
+      <input type="submit" name="Submit" />
     </form>
   );
 };

@@ -1,6 +1,7 @@
-import { api } from "../../config/axios";
-import type { LoginRequest } from "../../types/login";
+import { api } from "@/config/axios";
+import type { LoginRequest, LoginResponse } from "@/types/login";
 
-export const login = (request: LoginRequest) => {
-  return api.post("auth/login", request)
-}
+export const login =
+  async (request: LoginRequest) => {
+    return (await api.post<LoginResponse>("auth/login", request)).data
+  }
