@@ -21,7 +21,7 @@ api.interceptors.request.use(async (config) => {
   if ((method === "POST" || method === "PUT" || method === "DELETE") && !csrfToken) {
     csrfFetching = true;
     try {
-      await api.get("/");
+      await api.get("csrf");
     } catch {
       // Even error responses carry X-CSRF-TOKEN header
     } finally {
